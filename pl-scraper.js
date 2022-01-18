@@ -18,6 +18,7 @@ axios(url)
         const rank = $(this).find('.rank').text();
         const playerName = $(this).find('.playerName').text();
         const nationality = $(this).find('.playerCountry').text();
+        const club = $(this).find('.statNameSecondary').text();
         const saves = $(this).find('.mainStat').text();
     
 
@@ -25,6 +26,7 @@ axios(url)
         rank,
         name: playerName,
         nationality, 
+        club: club,
         saves,
     });
     });
