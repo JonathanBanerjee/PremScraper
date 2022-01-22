@@ -3,32 +3,32 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const savesURL = 'https://www.premierleague.com/stats/top/players/saves';
-// const goalsURL = 'https://www.premierleague.com/stats/top/players/saves';
+const url = 'https://uk.soccerway.com/national/england/premier-league/20212022/regular-season/r63396/players/';
 
-axios(savesURL)
+axios(url)
     .then(response => {
         const html = response.data;
         console.log(html);
         const $ = cheerio.load(html)
-        const savesTable = $('.statsTableContainer > tr');
+        const goalsTable = $('#page_competition_1_block_competition_playerstats_13_block_competition_playerstats_topscores_1_table'); 
         const topSavers = [];
     
 
-    savesTable.each(function () {
-        const rank = $(this).find('.rank').text();
-        const playerName = $(this).find('.playerName').text();
-        const nationality = $(this).find('.playerCountry').text();
-        const club = $(this).find('.statNameSecondary').text();
-        const saves = $(this).find('.mainStat').text();
-    
+    goalsTable.each(function () {
+        // const rank = $(this).find('.rank').text();
+        const playerName = $(this).find('.player').text();
+        const teamName = $(this).find('.team').text();
+        const Goals = $(this).find('.goals').text();
+        const firstGoals = $(this).find('.first-goals').text();
+        const penalties = $(this).find('.penalties').text();
 
     topSavers.push({
-        rank,
+        // rank,
         name: playerName,
-        nationality, 
-        club: club,
-        saves,
+        team: teamName,
+        Goals: Goals,
+        First_Goals: firstGoals,
+        Penalties: penalties
     });
     });
 
@@ -36,35 +36,3 @@ axios(savesURL)
 
     })
     .catch(console.error);
-
-
-    // axios(goalsURL)
-    // .then(response => {
-    //     const html = response.data;
-    //     console.log(html);
-    //     const $ = cheerio.load(html)
-    //     const goalsTable = $('.statsTableContainer > tr');
-    //     const topGoals = [];
-    
-
-    // goalsTable.each(function () {
-    //     const rank = $(this).find('.rank').text();
-    //     const playerName = $(this).find('.playerName').text();
-    //     const nationality = $(this).find('.playerCountry').text();
-    //     const club = $(this).find('.statNameSecondary').text();
-    //     const goals = $(this).find('.mainStat').text();
-    
-
-    // topGoals.push({
-    //     rank,
-    //     name: playerName,
-    //     nationality, 
-    //     club: club,
-    //     goals,
-    // });
-    // });
-
-    // console.log(topGoals);
-
-    // })
-    // .catch(console.error);
