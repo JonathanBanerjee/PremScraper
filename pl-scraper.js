@@ -31,8 +31,31 @@ axios(url)
         Penalties: penalties
     });
     });
+    console.log("|eeeh",topSavers);
 
-    console.log(topSavers);
+    const teamList = [];
+    const splitter = topSavers[0].team.split("\n");
 
-    })
+    const Namesplitter = topSavers[0].name.split();
+    console.log("NameTest", Namesplitter);
+
+    const Goalsplitter = topSavers[0].Goals.split("");
+    console.log("GoalTest", Goalsplitter);
+
+    const Pensplitter = topSavers[0].Penalties.split("");
+    console.log("PenTest", Pensplitter);
+
+    const FirstGoalsplitter = topSavers[0].First_Goals.split("");
+    console.log("FirsGoalTest", FirstGoalsplitter);
+
+    for (i = 0; i < splitter.length; i++)
+    {
+
+        if(splitter[i][splitter[i].length -1] !== ' '){
+            teamList.push(splitter[i]);
+    
+        }
+    }
+    console.log("Test", teamList)
+})
     .catch(console.error);
