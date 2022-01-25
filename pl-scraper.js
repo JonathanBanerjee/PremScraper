@@ -39,13 +39,16 @@ axios(url)
     const Namesplitter = topSavers[0].name.split();
     console.log("NameTest", Namesplitter);
 
-    const Goalsplitter = topSavers[0].Goals.split("");
-    console.log("GoalTest", Goalsplitter);
+    const newGoals = topSavers.goals;
+    console.log("JSON String", JSON.stringify(newGoals));
 
-    const Pensplitter = topSavers[0].Penalties.split("");
+    const Goalsplitter = topSavers[0].Goals.split("");
+    console.log("GoalTest", JSON.stringify(Goalsplitter));
+
+    const Pensplitter = topSavers[0].Penalties.split("").splice(1,15);
     console.log("PenTest", Pensplitter);
 
-    const FirstGoalsplitter = topSavers[0].First_Goals.split("");
+    const FirstGoalsplitter = topSavers[0].First_Goals.split("").splice(3,15);
     console.log("FirsGoalTest", FirstGoalsplitter);
 
     for (i = 0; i < splitter.length; i++)
