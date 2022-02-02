@@ -2,7 +2,6 @@
 
 const axios = require('axios');
 const cheerio = require('cheerio');
-
 const url = 'https://uk.soccerway.com/national/england/premier-league/20212022/regular-season/r63396/players/';
 
 axios(url)
