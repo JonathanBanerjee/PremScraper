@@ -56,12 +56,7 @@ axios(url)
     const Pensplitter = topSavers[0].Penalties.split("").splice(1,15);
     console.log("PenTest", Pensplitter);
 
-    const FirstGoalSplitter= topSavers[0].First_Goals.split("").splice(3,15);
-    console.log("FirsGoalTest", FirstGoalSplitter);
-    module.exports =  FirstGoalSplitter.value();
-    
+    const fg= topSavers[0].First_Goals.split("").splice(3,15);
+    console.log("FirsGoalTest", fg);    
 })
 .catch(console.error);
-
-
-  
