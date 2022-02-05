@@ -31,10 +31,19 @@ axios(url)
     });
     });
     console.log("|eeeh",topSavers);
-
+    
     const teamList = [];
     const splitter = topSavers[0].team.split("\n");
+    for (i = 0; i < splitter.length; i++)
+    {
 
+        if(splitter[i][splitter[i].length -1] !== ' '){
+            teamList.push(splitter[i]);
+    
+        }
+    }
+    console.log("Test", teamList)
+    
     const Namesplitter = topSavers[0].name.split();
     console.log("NameTest", Namesplitter);
 
@@ -47,17 +56,8 @@ axios(url)
     const Pensplitter = topSavers[0].Penalties.split("").splice(1,15);
     console.log("PenTest", Pensplitter);
 
-    const FirstGoalsplitter = topSavers[0].First_Goals.split("").splice(3,15);
-    console.log("FirsGoalTest", FirstGoalsplitter);
+    const FirstGoalSplitter= topSavers[0].First_Goals.split("").splice(3,15);
+    console.log("FirsGoalTest", FirstGoalSplitter);
 
-    for (i = 0; i < splitter.length; i++)
-    {
-
-        if(splitter[i][splitter[i].length -1] !== ' '){
-            teamList.push(splitter[i]);
-    
-        }
-    }
-    console.log("Test", teamList)
 })
     .catch(console.error);
