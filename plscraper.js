@@ -58,6 +58,10 @@ axios(url)
 
     const FirstGoalSplitter= topSavers[0].First_Goals.split("").splice(3,15);
     console.log("FirsGoalTest", FirstGoalSplitter);
-
+    module.exports =  FirstGoalSplitter.value();
+    
 })
-    .catch(console.error);
+.catch(console.error);
+
+
+  
