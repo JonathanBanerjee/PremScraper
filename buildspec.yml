@@ -1,25 +1,29 @@
-version 0.2
-phases: 
+version: 0.2
+
+  phases: 
     install:
     runtime-versions:
-    nodejs: 12
-      commands: 
-      - echo installing jest...
-      - npm install -g jest 
-pre-build:
+     nodejs: 12
+    commands: 
+        - echo installing jest...
+        - npm install -g jest 
+  pre-build:
   commands: 
-    - echo installing source npm dependencies...
-    - npm install 
-    - npm install jest
-    - npm install axios
-    - npm install cheerio 
-    - npm install express
+      - echo installing source npm dependencies...
+      - npm install 
+      - npm install jest
+      - npm install axios
+      - npm install cheerio 
+      - npm install express
 
   build: 
-    commands: 
-    - echo build started on `date`
-    - echo Compiling the Node.js code
-    - jest sum.test.js 
+  commands: 
+      - echo build started on `date`
+      - echo Compiling the Node.js code
+      - jest sum.test.js 
+  post_build:
+  commands:
+      - echo Build completed on `date`
 
       # - sudo apt-get install curl
       # - echo installing node 16...
