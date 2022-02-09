@@ -38,7 +38,8 @@ reports:
     files:
       - jest.config.js
     file-format: JUNITXML
-    base-directory: /Users/Bano/PremScraper
+    base-directory: 
+      - Users/Bano/PremScraper
 
 
 
