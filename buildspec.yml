@@ -26,10 +26,15 @@ post_build:
  - echo Build completed on `date`
 
 artifacts:
- files:  
- - "**/*/"
- discard-paths: no 
- base-directory: dist
+ files:
+  - buildspec.yml
+  - build/*
+
+# artifacts:
+#  files:  
+#  - "**/*/"
+#  discard-paths: no 
+#  base-directory: dist
 
           # - sudo apt-get install curl
       # - echo installing node 16...
