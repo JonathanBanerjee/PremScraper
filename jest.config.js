@@ -1,11 +1,14 @@
-const { sum } = require("./sum");
-
-module.exports = {
-    reporters: [
-      'default',
-      [ 'jest-junit', {
-        outputDirectory: premscraper,
-        outputName: sum.test.js,
-      } ]
-    ]
+// Sync object
+/** @type {import('@jest/types').Config.InitialOptions} */
+const config = {
+    verbose: true,
+  };
+  
+  module.exports = config;
+  
+  // Or async function
+  module.exports = async () => {
+    return {
+      verbose: true,
+    };
   };
