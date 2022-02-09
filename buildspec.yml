@@ -36,9 +36,9 @@ artifacts:
 reports:
   jest_reports:
     files:
-      - sum.test.js
+      - jest.config.js
     file-format: JUNITXML
-    base-directory: premscraper
+    base-directory: /Users/Bano/PremScraper
 
 
 
