@@ -27,9 +27,9 @@ post_build:
 
 artifacts:
  files:  
- - "**/*"
- discard-paths: no 
- base-directory: dist
+ - "**/*/"
+  discard-paths: no 
+  base-directory: dist
 
           # - sudo apt-get install curl
       # - echo installing node 16...
