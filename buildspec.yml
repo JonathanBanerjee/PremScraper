@@ -1,8 +1,8 @@
 version: 0.2
 phases: 
-install:
-runtime-versions:
-nodejs: 12
+ install:
+ runtime-versions:
+ nodejs: 12
 
 commands: 
 - echo installing jest...
@@ -26,10 +26,10 @@ post_build:
  - echo Build completed on `date`
 
 artifacts:
-files:  
-- "**/*"
-discard-paths: no 
-base-directory: dist
+ files:  
+ - "**/*"
+ discard-paths: no 
+ base-directory: dist
 
           # - sudo apt-get install curl
       # - echo installing node 16...
