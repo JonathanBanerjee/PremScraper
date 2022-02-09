@@ -1,33 +1,35 @@
 version: 0.2
-  phases: 
-    install:
-    runtime-versions:
-     nodejs: 12
-    commands: 
-        - echo installing jest...
-        - npm install -g jest 
-  pre-build:
-  commands: 
-      - echo installing source npm dependencies...
-      - npm install 
-      - npm install jest
-      - npm install axios
-      - npm install cheerio 
-      - npm install express
+phases: 
+install:
+runtime-versions:
+nodejs: 12
 
-  build: 
-  commands: 
-      - echo build started on `date`
-      - echo Compiling the Node.js code
-      - jest sum.test.js 
-  post_build:
-  commands:
-      - echo Build completed on `date`
+commands: 
+- echo installing jest...
+- npm install -g jest 
+pre-build:
+ commands: 
+ - echo installing source npm dependencies...
+ - npm install 
+ - npm install jest
+ - npm install axios
+ - npm install cheerio 
+ - npm install express
+
+build: 
+ commands: 
+ - echo build started on `date`
+ - echo Compiling the Node.js code
+ - jest sum.test.js 
+post_build:
+ commands:
+ - echo Build completed on `date`
+
 artifacts:
-    files:  
-    - "**/*"
-    discard-paths: no 
-    base-directory: dist
+files:  
+- "**/*"
+discard-paths: no 
+base-directory: dist
 
           # - sudo apt-get install curl
       # - echo installing node 16...
