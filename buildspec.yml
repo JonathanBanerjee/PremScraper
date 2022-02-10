@@ -3,7 +3,8 @@ phases:
  install:
   runtime-versions:
    nodejs: 12
-
+   jest: 27.5.0
+   jest-junit: 13.0.0
 
 pre-build:
  commands: 
