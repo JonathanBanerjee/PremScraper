@@ -19,15 +19,15 @@ build:
 
  - echo building 
  - npm build
+ - npm run test 
  - echo Running tests for sum.js
- - npm test -f sum.test.js -fn
 post_build:
  commands:
  - echo Build completed on `date`
 
 artifacts:
  files:
-  - '**/*'
+  - 'jest.config.js'
 #   - sum.test.js
   - build/*
 
