@@ -11,20 +11,16 @@ pre-build:
  commands: 
  - echo installing source npm dependencies...
  - npm install 
-#  - npm install jest
-#  - npm install axios
-#  - npm install cheerio 
-#  - npm install express
 
 build: 
  commands: 
  - echo build started on `date`
  - echo Compiling the Node.js code
-#  - jest sum.test.js 
+
  - echo building 
  - npm build
- - echo testing
- - npm run test
+ - echo Running tests for sum.js
+ - npm test -f sum.test.js -fn
 post_build:
  commands:
  - echo Build completed on `date`
