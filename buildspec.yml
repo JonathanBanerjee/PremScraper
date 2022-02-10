@@ -28,3 +28,10 @@ artifacts:
   - 'jest.config.js'
   - build/*
 
+reports:
+  jest_reports:
+    files:
+      - './sum.js'
+    file-format: JUNITXML
+    base-directory: 'premscraper'
+
