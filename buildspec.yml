@@ -1,7 +1,6 @@
 version: 0.2
 phases: 
  install:
-  - jest
   runtime-versions:
    nodejs: 12
 
@@ -27,47 +26,5 @@ post_build:
 artifacts:
  files:
   - 'jest.config.js'
-#   - sum.test.js
   - build/*
 
-# reports:
-#   jest_reports:
-#     files:
-#       - jest.config.js
-#     file-format: JUNITXML
-#     base-directory: 
-#       - Users/Bano/PremScraper
-
-
-
-# version: 0.2
-# phases: 
-#  install:
-#   runtime-versions:
-#    nodejs: 12
-
-# commands: 
-# - echo installing jest...
-# - npm install -g jest 
-# pre-build:
-#  commands: 
-#  - echo installing source npm dependencies...
-#  - npm install 
-#  - npm install jest
-#  - npm install axios
-#  - npm install cheerio 
-#  - npm install express
-
-# build: 
-#  commands: 
-#  - echo build started on `date`
-#  - echo Compiling the Node.js code
-#  - jest sum.test.js 
-# post_build:
-#  commands:
-#  - echo Build completed on `date`
-
-# artifacts:
-#  files:
-#   - buildspec.yml
-#   - build/*
