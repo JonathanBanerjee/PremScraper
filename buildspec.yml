@@ -4,13 +4,13 @@ phases:
   runtime-versions:
    nodejs: 12
 
-commands: 
-- echo installing jest...
-- npm install -g jest 
+
 pre-build:
  commands: 
  - echo installing source npm dependencies...
  - npm install 
+ - echo installing jest...
+ - npm install --save-dev jest
 
 build: 
  commands: 
@@ -20,7 +20,7 @@ build:
  - echo building 
  - npm build
  - npm run jest 
- - echo Running tests for sum.js
+ - echo Running tests...
 post_build:
  commands:
  - echo Build completed on `date`
