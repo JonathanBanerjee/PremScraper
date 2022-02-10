@@ -33,5 +33,5 @@ reports:
     files:
       - './sum.js'
     file-format: JUNITXML
-    base-directory: './premscraper'
+    base-directory: .
 
