@@ -23,16 +23,20 @@ post_build:
  commands:
  - echo Build completed on `date`
 
-artifacts:
- files:
-  - 'jest.config.js'
-  - build/*
-
-reports:
+ reports:
   jest_reports:
     files:
       - './sum.js'
     file-format: JUNITXML
-    base-directory: .
-    S3: codepipeline-eu-west-2-61432643083
+  base-directory: .
+
+artifacts:
+ files:
+  - 'jest.config.js'
+  - './sum.js'
+  - build/*
+
+
+
+
 
