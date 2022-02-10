@@ -19,7 +19,7 @@ build:
 
  - echo building 
  - npm build
- - npm run test 
+ - npm run jest 
  - echo Running tests for sum.js
 post_build:
  commands:
