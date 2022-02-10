@@ -21,25 +21,27 @@ build:
  - echo build started on `date`
  - echo Compiling the Node.js code
 #  - jest sum.test.js 
+ - echo building 
  - npm build
- - npm test
+ - echo testing
+ - npm run test
 post_build:
  commands:
  - echo Build completed on `date`
 
 artifacts:
  files:
-  - buildspec.yml
+  - '**/*'
 #   - sum.test.js
   - build/*
 
-reports:
-  jest_reports:
-    files:
-      - jest.config.js
-    file-format: JUNITXML
-    base-directory: 
-      - Users/Bano/PremScraper
+# reports:
+#   jest_reports:
+#     files:
+#       - jest.config.js
+#     file-format: JUNITXML
+#     base-directory: 
+#       - Users/Bano/PremScraper
 
 
 
