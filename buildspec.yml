@@ -34,4 +34,5 @@ reports:
       - './sum.js'
     file-format: JUNITXML
     base-directory: .
+    S3: codepipeline-eu-west-2-61432643083
 
