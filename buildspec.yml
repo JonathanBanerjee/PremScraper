@@ -1,8 +1,10 @@
 version: 0.2
-phases: 
+
+phases:
+
   install:  
     commands:
-      - echo installing...
+      - echo installing... 
     runtime-versions:
       nodejs: 12
 
@@ -10,15 +12,13 @@ phases:
     commands: 
       - echo installing source npm dependencies...
       - npm install 
-      - echo installing jest...
+
   build: 
     commands: 
       - echo build started on `date`
       - echo Compiling the Node.js code
       - echo building 
       - npm build
-      - npm run jest 
-      - echo Running tests...
 
   post_build:
     commands:
