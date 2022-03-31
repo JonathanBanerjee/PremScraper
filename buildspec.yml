@@ -29,10 +29,10 @@ phases:
 #     file-format: JUNITXML
 #     base-directory: .
 
-artifacts:
-  files:
-    # - 'jest.config.js'
-    # - build/*
+# artifacts:
+#   files:
+#     # - 'jest.config.js'
+#     # - build/*
 
 
 
