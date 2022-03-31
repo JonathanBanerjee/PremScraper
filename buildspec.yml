@@ -22,18 +22,17 @@ phases:
       - npm test
       - echo Build completed on `date`
 
-reports:
-  jest_reports:
-    files:
-      - './sum.test.js'
-    file-format: JUNITXML
-    base-directory: .
+# reports:
+#   jest_reports:
+#     files:
+#       - './sum.test.js'
+#     file-format: JUNITXML
+#     base-directory: .
 
 artifacts:
   files:
-    - 'jest.config.js'
-    - './sum.test.js'
-    - build/*
+    # - 'jest.config.js'
+    # - build/*
 
 
 
